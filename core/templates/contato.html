@@ -1,0 +1,119 @@
+{% load static %}
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Contato</h2>
+      <p>Precisa de Ajuda? <span>Contate-nos</span></p>
+    </div>
+
+    <div class="mb-3">
+      <iframe style="border:0; width: 100%; height: 350px;"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+        frameborder="0" allowfullscreen></iframe>
+    </div><!-- End Google Maps -->
+
+    <div class="row gy-4">
+
+      <div class="col-md-6">
+        <div class="info-item  d-flex align-items-center">
+          <i class="icon bi bi-map flex-shrink-0"></i>
+          <div>
+            <h3>Nosso endereço</h3>
+            <p>A108 Adam Street, New York, NY 535022</p>
+          </div>
+        </div>
+      </div><!-- End Info Item -->
+
+      <div class="col-md-6">
+        <div class="info-item d-flex align-items-center">
+          <i class="icon bi bi-envelope flex-shrink-0"></i>
+          <div>
+            <h3>Email Us</h3>
+            <p>contact@example.com</p>
+          </div>
+        </div>
+      </div><!-- End Info Item -->
+
+      <div class="col-md-6">
+        <div class="info-item  d-flex align-items-center">
+          <i class="icon bi bi-telephone flex-shrink-0"></i>
+          <div>
+            <h3>Call Us</h3>
+            <p>+1 5589 55488 55</p>
+          </div>
+        </div>
+      </div><!-- End Info Item -->
+
+      <div class="col-md-6">
+        <div class="info-item  d-flex align-items-center">
+          <i class="icon bi bi-share flex-shrink-0"></i>
+          <div>
+            <h3>Opening Hours</h3>
+            <div><strong>Mon-Sat:</strong> 11AM - 23PM;
+              <strong>Sunday:</strong> Closed
+            </div>
+          </div>
+        </div>
+      </div><!-- End Info Item -->
+
+    </div>
+
+    <form id="contato" method="post" action="{% url 'index' %}" role="form" class="php-email-form p-3 p-md-4">
+      {% csrf_token %}
+
+      <div class="row">
+        <div class="col-xl-6 form-group">
+          <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required
+            data-error="Insira o nome">
+        </div>
+        <div class="col-xl-6 form-group">
+          <input type="text" placeholder="E-mail" id="email" class="form-control" name="email" required
+            data-error="Insira seu email">
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Assunto" id="assunto" name="assunto" class="form-control" required
+          data-error="Insira o assunto da mensagem">
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Escreva sua Mensagem" rows="7"
+          data-error="Escreva sua mensagem" required></textarea>
+      </div>
+
+      <div class="my-3">
+        <div class="loading">Carregando</div>
+        <!-- <div class="error-message"></div> -->
+
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            <button type="button" class="close" data-dismiss="alert"></button>
+            <strong>
+                {{ message }}
+            </strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <div class="text-center">
+          <button id="form-submit" type="submit">Enviar mensagem</button>
+        </div>
+
+<!-- 
+        <div class="sent-message">Sua mensagem foi enviada!</div>
+      </div>
+      <div class="text-center">
+        <button id="form-submit" type="submit">Enviar mensagem</button>
+      </div>
+ -->
+
+    </form><!--End Contact Form -->
+
+
+  </div>
+</section><!-- End Contact Section -->
+
+</main><!-- End #main -->

@@ -1,0 +1,50 @@
+{% load static %}
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-lg-0">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1>Yummy<span>.</span></h1>
+    </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#menu">Cardápio</a></li>
+        <li><a href="#chefs">Chefs</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav><!-- .navbar -->
+    
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+  </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center section-bg">
+  <div class="container">
+    <div class="row justify-content-between gy-5">
+      <div
+        class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+        <h2 data-aos="fade-up">Enjoy Your Healthy<br>Delicious Food</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
+          suscipit perferendis nesciunt dicta ipsa accusantium velit eaque consectetur assumenda nisi minima ullam
+          officia, obcaecati minus incidunt libero necessitatibus quibusdam odio.
+        </p>
+        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+          <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+            class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch
+              Video</span></a>
+        </div>
+      </div>
+      <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+        <img src="{% static 'img/hero-img.png' %}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+      </div>
+    </div>
+  </div>
+</section><!-- End Hero Section -->
