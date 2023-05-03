@@ -18,4 +18,6 @@ Se você encontrar um bug ou quiser contribuir com este projeto, sinta-se à von
 Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.
 
 ## Template
+![Alt Text](https://github.com/MQSilveira/projeto-django/blob/main/media/layout.png)
+<br>
 [Clique aqui para acessar o template](https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/)
