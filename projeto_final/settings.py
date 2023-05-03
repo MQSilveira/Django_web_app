@@ -14,9 +14,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-gc*qah0x7a*nan-z+p803p^m+g#+1ac)i7r(#diw-@(f&(ivqx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['projeto-django.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -66,7 +66,6 @@ WSGI_APPLICATION = 'projeto_final.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-"""     BANCO LOCAL
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -77,10 +76,10 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-"""
-DATABASES = {
-    'default': dj_database_url.config()
-}
+
+# DATABASES = {
+#     'default': dj_database_url.config()
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
